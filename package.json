@@ -1,0 +1,25 @@
+{
+  "name": "neon-embeddings",
+  "version": "0.1.0",
+  "description": "Wraps fastembed-rs into a TypeScript module via Neon",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "cargo-cp-artifact -nc lib/embeddings.node -- cargo build --message-format=json-render-diagnostics",
+    "build-debug": "npm run build --",
+    "build-release": "npm run build -- --release",
+    "postbuild": "npm run docs",
+    "install": "npm run build-release",
+    "test": "cargo test; node --import tsx --test src/index.spec.ts",
+    "docs": "typedoc --plugin typedoc-plugin-markdown src/index.ts"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.14",
+    "@types/node": "^20.12.2",
+    "cargo-cp-artifact": "^0.1",
+    "chai": "^5.1.0",
+    "tsx": "^4.7.1",
+    "typedoc": "^0.25.12",
+    "typedoc-plugin-markdown": "^4.0.0-next.54",
+    "typescript": "^5.4.3"
+  }
+}

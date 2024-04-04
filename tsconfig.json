@@ -1,0 +1,30 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "allowJs": false,
+      "typeRoots": ["node_modules/@types"]
+    }
+  },
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "allowJs": true,
+    "alwaysStrict": true,
+    "checkJs": false,
+    "declaration": true,
+    "declarationDir": "types",
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "build",
+    "resolveJsonModule": false,
+    "rootDir": ".",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "target": "esnext"
+  },
+  "include": [
+    "./src/*.ts"
+  ]
+}

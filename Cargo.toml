@@ -1,0 +1,15 @@
+[package]
+name = "neon-embeddings"
+version = "0.1.0"
+description = "Wraps fastembed-rs into a TypeScript module via Neon"
+edition = "2018"
+exclude = ["embeddings.node"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+neon = "1"
+fastembed = "3"
+tokio = { version = "1", features = ["full"] }
+once_cell = "1.19.0"
